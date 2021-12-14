@@ -7,4 +7,4 @@ this repo use mupdf to turn pdf to imgs, free and best performance we ever see, 
 1. this jar use the lib of mupdf, which is written by c, so this jar is very fast.
 2. as far as I know, most opensource tool such as pdfbox of apache, can not performs well on mouse-selectable pdf, which contain chars you can copy. some tools may can, but they are not free and opensource.
 # thanks
-- thanks to the great (https://www.mupdf.com/)[https://www.mupdf.com/]
+- thanks to the great [mupdf library](https://www.mupdf.com/)
