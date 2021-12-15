@@ -138,11 +138,7 @@ public class Transform {
 
 
     public static void main(String[] args) throws Exception {
-//        String pdfPath = "/home/alvin/yjrwork/bankStreamReco/纯文本类型的银行流水pdf/梁月顺 工行 6222034000018587612.pdf";
-//        String pdfPath = "/home/alvin/yjrwork/bankStreamReco/纯文本类型的银行流水pdf/梁月顺 浦发 6217921101199498.pdf";
-        addLibraryPath("/home/alvin/下载/开源代码/mupdf-1.19.0-source/build/java/release");
-
-//        String pdfPath = "/home/alvin/yjrwork/bankStreamReco/纯文本类型的银行流水pdf/林翔 东莞农商行 200080002850534.pdf";
+        addLibraryPath("/mupdf-1.19.0-source/build/java/release");
         List<String> allPdfs = new ArrayList<>();
         String pdfDir = "pdfs";
         traverse(new File(pdfDir), allPdfs);
@@ -158,8 +154,8 @@ public class Transform {
                 document.saveAccelerator(acceleratorPath);
                 int pageCount = document.countPages();
                 for (int i = 0; i < pageCount; i++){
-                    File output = new File("/home/alvin/opensoureWork/pdf2Img/img"+ File.separator+i+".jpg");
-//            pdfDocument.saveAsPng(i, "/home/alvin/yjrwork/bankStreamReco/pdf转image"+ File.separator+i+".png",
+                    File output = new File("pdf2Img/img"+ File.separator+i+".jpg");
+//            pdfDocument.saveAsPng(i, "/pdf转image"+ File.separator+i+".png",
 //                    1.0f, ImageType.IMAGE_TYPE_RGB);
                     Page page = document.loadPage(i);
                     final BufferedImage bufferedImage = Transform.turnPage2Img(page);
